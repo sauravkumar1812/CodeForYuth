@@ -39,6 +39,7 @@ dependencies:
   font_awesome_flutter: ^10.4.0
   floating_bottom_navigation_bar: ^1.5.2
   flutter_chat_ui: ^1.6.6
+  grouped_list: ^5.1.2
 dev_dependencies:
   flutter_test:
     sdk: flutter
