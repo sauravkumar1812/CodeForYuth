@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import "package:flutter_chat_ui/flutter_chat_ui.dart";
 
 class chatbot extends StatelessWidget {
   const chatbot({super.key});
@@ -52,7 +53,31 @@ class chatbot extends StatelessWidget {
                     ),
                    child: Column(
                     children: [
-                   
+                     Padding(
+                       padding: const EdgeInsets.only(left: 20,right: 150,top: 10),
+                       child: Container(
+                                      height: MediaQuery.of(context).size.height *0.06,
+                                   width: MediaQuery.of(context).size.width,
+                            
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(15),
+                              ),
+                              child: Padding(
+                                padding: const EdgeInsets.only(left: 20,top: 15),
+                                child: Text(
+                                  'Hey, Chatbot is here....',
+                                  textAlign: TextAlign.left,
+                                  style: TextStyle(
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.w400,
+                                    // height: 1.7,
+                                    color: Colors.black,
+                                  ),
+                                ),
+                              ),
+                            ),
+                     ),
                     ],
                    ),
                     
