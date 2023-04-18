@@ -10,10 +10,8 @@ class messagepage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
          backgroundColor: Colors.white,
-      title: Padding(
-        padding: const EdgeInsets.only(left: 115),
-        child: Text("Community Tab",style: TextStyle(color: Colors.black)),
-      ),
+      title: Text("Community Tab",style: TextStyle(color: Colors.black)),
+      centerTitle: true,
       ),
       body: ListView(
      children: [

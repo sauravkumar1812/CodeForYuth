@@ -22,7 +22,7 @@ class LoginPage extends StatelessWidget {
                   
           ),
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 42),
+            padding: EdgeInsets.symmetric(horizontal: 42,vertical: 12),
             child: Text("Login",
                 style: TextStyle(
                   color: Colors.black,
@@ -65,13 +65,13 @@ class LoginPage extends StatelessWidget {
                 style: TextStyle(fontSize: 18.0, color: Color(0xFFbdc6cf)),
                 decoration: InputDecoration(
                   filled: true,
-                  fillColor: Color.fromARGB(255, 123, 125, 127),
+                  fillColor: Color.fromARGB(255, 226, 226, 226),
                   hintText: 'Password',
-                  hintStyle: TextStyle(color: Colors.white),
+                  hintStyle: TextStyle(color: Color.fromARGB(255, 182, 182, 182)),
                   contentPadding:
                       EdgeInsets.only(left: 20.0, bottom: 8.0, top: 8.0),
                   focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.grey),
+                    borderSide: BorderSide(color: Color.fromARGB(255, 226, 226, 226)),
                     borderRadius: BorderRadius.circular(15),
                   ),
                   enabledBorder: UnderlineInputBorder(
@@ -95,7 +95,12 @@ class LoginPage extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 40,),
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    
+  Navigator.push(context,
+      MaterialPageRoute(builder: (context) => bottompage()));
+
+                  },
                   child: Text('Log in',style: TextStyle(fontSize: 25),),
                   style: ButtonStyle(
                       foregroundColor: MaterialStateProperty.all(Colors.white),
@@ -134,11 +139,17 @@ class LoginPage extends StatelessWidget {
             children: [
               Padding(
                 padding: const EdgeInsets.only(top: 40, left: 60),
-                child: Image(
-                    height: MediaQuery.of(context).size.height * 0.05,
-                    image: AssetImage(
-                      'assets/login/google.png',
-                    )),
+                child: InkWell(
+                  onTap: () {
+                    Navigator.push(context,
+      MaterialPageRoute(builder: (context) => bottompage()));
+                  },
+                  child: Image(
+                      height: MediaQuery.of(context).size.height * 0.05,
+                      image: AssetImage(
+                        'assets/login/google.png',
+                      )),
+                ),
               ),
               Padding(
                 padding: const EdgeInsets.only(left: 40, top: 40),

@@ -1,3 +1,5 @@
+import 'package:code4yth/chatbot/chatbot.dart';
+import 'package:code4yth/message/persnoltalk.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
@@ -28,7 +30,10 @@ class chatbotpage extends StatelessWidget {
               height: 40,
               width: 110,
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                   Navigator.push(context,
+      MaterialPageRoute(builder: (context) => chatbot()));
+                },
                 child: Text('Start Chat'),
                 style: ButtonStyle(
                     foregroundColor: MaterialStateProperty.all(Colors.white),
