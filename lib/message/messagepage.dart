@@ -9,6 +9,7 @@ class messagepage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        elevation: 0,
          backgroundColor: Colors.white,
       title: Text("Community Tab",style: TextStyle(color: Colors.black)),
       centerTitle: true,
