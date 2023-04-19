@@ -21,8 +21,8 @@ class bottompage extends StatefulWidget {
 class _bottompageState extends State<bottompage> {
   int _selectedPage = 0;
   final screens = [
-    chatbotpage(),
     personaltalk(),
+    chatbotpage(),
     messagepage(),
     profilepage(),
   ];
