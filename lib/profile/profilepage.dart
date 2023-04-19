@@ -5,7 +5,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:code4yth/profiledetail/details.dart';
 
-import '../bottompage/bottompage.dart';
+
 
 class profilepage extends StatelessWidget {
   const profilepage({super.key});
@@ -14,6 +14,7 @@ class profilepage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        elevation: 0,
                     leading: new IconButton(
                       
                       icon: Padding(
@@ -58,9 +59,9 @@ class profilepage extends StatelessWidget {
            
            ) ,
        
-           
+            
         ]),
-  
+ 
     );
   }
 }
