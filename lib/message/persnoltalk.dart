@@ -16,6 +16,7 @@ class personaltalk extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        elevation: 0,
                     leading: new IconButton(
                       
                       icon: Padding(
