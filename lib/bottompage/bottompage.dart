@@ -33,7 +33,7 @@ class _bottompageState extends State<bottompage> {
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.symmetric(vertical: 12,horizontal: 10),
         child: ClipRRect(
-           borderRadius: BorderRadius.circular(15),
+           borderRadius: BorderRadius.circular(30),
           child: BottomNavigationBar(
             currentIndex: _selectedPage,
             type: BottomNavigationBarType.fixed,
