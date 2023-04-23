@@ -36,8 +36,8 @@ class profilepage extends StatelessWidget {
             ),
             onPressed: () {
               // do something
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => logout()));
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => logout()));
             },
           )
         ],
@@ -52,14 +52,14 @@ class profilepage extends StatelessWidget {
           ),
         ),
         Container(
-          height: MediaQuery.of(context).size.height * 0.25,
-          width: MediaQuery.of(context).size.width ,
+          height: MediaQuery.of(context).size.height * 0.15,
+          width: MediaQuery.of(context).size.width,
           decoration: BoxDecoration(
               image: DecorationImage(
                   image: AssetImage('assets/profile/Nature.png'))),
         ),
         Padding(
-          padding: const EdgeInsets.only(right: 250.0, bottom: 10),
+          padding: const EdgeInsets.only(right: 250.0, bottom: 10,),
           child: Text(
             "What's the mood?",
             style: TextStyle(
@@ -67,83 +67,101 @@ class profilepage extends StatelessWidget {
             ),
           ),
         ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
+        Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
           ClipRRect(
             borderRadius: BorderRadius.circular(10),
             child: Container(
-              height: MediaQuery.of(context).size.height * 0.1,
-              width: MediaQuery.of(context).size.width * 0.22,
-              color: Color.fromARGB(255, 101, 130, 144),
-            ),
-          ),
-            ClipRRect(
-              borderRadius: BorderRadius.circular(10),
-            child: Container(
-              height: MediaQuery.of(context).size.height * 0.1,
-              width: MediaQuery.of(context).size.width * 0.22,
+              child: Image(
+                image:AssetImage("assets/bot/pensive.png") ),
+              height: MediaQuery.of(context).size.height * 0.08,
+              width: MediaQuery.of(context).size.width * 0.18,
               color: Color.fromARGB(255, 101, 130, 144),
             ),
           ),
           ClipRRect(
             borderRadius: BorderRadius.circular(10),
             child: Container(
-              height: MediaQuery.of(context).size.height * 0.1,
-              width: MediaQuery.of(context).size.width * 0.22,
+              child: Image(
+                image:AssetImage("assets/bot/crying.png") ),
+              height: MediaQuery.of(context).size.height * 0.08,
+              width: MediaQuery.of(context).size.width * 0.18,
               color: Color.fromARGB(255, 101, 130, 144),
             ),
           ),
           ClipRRect(
             borderRadius: BorderRadius.circular(10),
             child: Container(
-              height: MediaQuery.of(context).size.height * 0.1,
-              width: MediaQuery.of(context).size.width * 0.22,
+              child: Image(
+                image:AssetImage("assets/bot/confounded.png") ),
+        
+              height: MediaQuery.of(context).size.height * 0.08,
+              width: MediaQuery.of(context).size.width * 0.18,
+              color: Color.fromARGB(255, 101, 130, 144),
+            ),
+          ),
+          ClipRRect(
+            borderRadius: BorderRadius.circular(10),
+            child: Container(
+              child: Image(
+                image:AssetImage("assets/bot/Ellipse.png") ),
+              height: MediaQuery.of(context).size.height * 0.08,
+              width: MediaQuery.of(context).size.width * 0.18,
               color: Color.fromARGB(255, 101, 130, 144),
             ),
           ),
         ]),
         Row(
-mainAxisAlignment: MainAxisAlignment.spaceAround, 
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-             Text(
-               "Mon",
-               style: TextStyle(
-                 fontSize: 20,
-               ),
-             ),
+            Text(
+              "Mon",
+              style: TextStyle(
+                fontSize: 15,
+              ),
+            ),
             Text(
               "Tue",
               style: TextStyle(
-                fontSize: 20,
+                fontSize: 15,
               ),
-            ),    Text(
+            ),
+            Text(
               "Wed",
               style: TextStyle(
-                fontSize: 20,
+                fontSize: 15,
               ),
-            ),    Text(
+            ),
+            Text(
               "Thu",
               style: TextStyle(
-                fontSize: 20,
+                fontSize: 15,
               ),
             ),
           ],
         ),
-
+        Padding(
+          padding: const EdgeInsets.only(right: 180.0, top: 10),
+          child: Text(
+            "Time for a Weekly Test",
+            style: TextStyle(
+              fontSize: 18,
+            ),
+          ),
+        ),
         Container(
           width: MediaQuery.of(context).size.width * 0.90,
-          height: MediaQuery.of(context).size.height * 0.08,
+          height: MediaQuery.of(context).size.height * 0.07,
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 20),
+            padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 8),
             child: ElevatedButton(
               onPressed: () {},
               child: Row(
                 children: [
-                 Icon(
-                Icons.arrow_back_ios,
-                color: Color.fromARGB(255, 255, 254, 254),
-                size: 20,
-              ),
+                  Icon(
+                    Icons.arrow_back_ios,
+                    color: Color.fromARGB(255, 255, 254, 254),
+                    size: 20,
+                  ),
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 80),
                     child: Text(
@@ -153,7 +171,6 @@ mainAxisAlignment: MainAxisAlignment.spaceAround,
                   ),
                 ],
               ),
-              
               style: ButtonStyle(
                   foregroundColor: MaterialStateProperty.all(Colors.white),
                   backgroundColor: MaterialStateProperty.all(
@@ -163,41 +180,73 @@ mainAxisAlignment: MainAxisAlignment.spaceAround,
                           borderRadius: BorderRadius.circular(10)))),
             ),
           ),
-          
-        ),
-         Padding(
-          padding: const EdgeInsets.only(right: 260.0, ),
-          child: Text(
-            "Daily journal",
-            style: TextStyle(
-              fontSize: 20,
-            ),
-          ),
         ),
         Padding(
-          padding: const EdgeInsets.only(top: 10,left: 20,right: 20,bottom: 10),
-          child: Container(
-            height: MediaQuery.of(context).size.height * 0.22,
+          padding: const EdgeInsets.only(
+            right: 260.0,top: 12
+          ),
+          // child: Text(
+          //   "Daily journal",
+          //   style: TextStyle(
+          //     fontSize: 20,
+          //   ),
+          // ),
+        ),
+            Padding(
+            padding: const EdgeInsets.only(bottom: 20, right: 25, left: 25,top: 10),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(12.0),
+              child: Container(
+                padding: EdgeInsets.only(left: 15,),
+                 height: MediaQuery.of(context).size.height * 0.08,
             width: MediaQuery.of(context).size.width,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(20),
-              color: Color.fromARGB(255, 230, 229, 229),
-            ),
-            child: Padding(
-              padding: const EdgeInsets.only(left: 20, top: 15),
-              child: Text(
-                "Tell us how your day today......",
-                textAlign: TextAlign.left,
-                style: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.w400,
-                  // height: 1.7,
-                  color: Color.fromARGB(255, 40, 40, 40),
+                color: Colors.grey.shade300,
+                child: TextField(
+                        cursorColor: Colors.black,
+              style: TextStyle(
+                color: Colors.black,
+              ),
+                  decoration:  InputDecoration(
+                    border: OutlineInputBorder(
+                      borderSide: BorderSide.none,
+                    
+                      
+                    ),
+                
+                  
+                    contentPadding: EdgeInsets.symmetric(vertical: 10),
+                    hintText: 'Tell us how your day today......',
+                   
+                  ),
                 ),
               ),
             ),
-          ),
-        ),
+          )
+        // Padding(
+        //   padding:
+        //       const EdgeInsets.only(top: 10, left: 20, right: 20, bottom: 10),
+        //   child: Container(
+        //     height: MediaQuery.of(context).size.height * 0.18,
+        //     width: MediaQuery.of(context).size.width,
+        //     decoration: BoxDecoration(
+        //       borderRadius: BorderRadius.circular(20),
+        //       color: Color.fromARGB(255, 230, 229, 229),
+        //     ),
+        //     child: Padding(
+        //       padding: const EdgeInsets.only(left: 20, top: 15),
+        //       child: Text(
+        //         "Tell us how your day today......",
+        //         textAlign: TextAlign.left,
+        //         style: TextStyle(
+        //           fontSize: 18,
+        //           fontWeight: FontWeight.w400,
+        //           // height: 1.7,
+        //           color: Color.fromARGB(255, 127, 127, 127),
+        //         ),
+        //       ),
+        //     ),
+        //   ),
+        // ),
         //  Padding(
         //    padding: const EdgeInsets.only(bottom: 20,top: 20,),
         //    child: details(),

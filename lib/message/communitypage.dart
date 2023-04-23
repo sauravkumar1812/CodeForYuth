@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
-
+import 'package:flutter_chat_ui/flutter_chat_ui.dart';
 class communitypage extends StatelessWidget {
   const communitypage({super.key});
 
@@ -36,5 +36,18 @@ class communitypage extends StatelessWidget {
          
          
     );
+  }
+}
+class communitypage1 extends StatefulWidget {
+  const communitypage1({super.key});
+
+  @override
+  State<communitypage1> createState() => _communitypage1State();
+}
+
+class _communitypage1State extends State<communitypage1> {
+  @override
+  Widget build(BuildContext context) {
+    return const Placeholder();
   }
 }

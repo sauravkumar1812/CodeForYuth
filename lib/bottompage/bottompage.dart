@@ -9,6 +9,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:code4yth/chatbot/chatbotpage.dart';
 import 'package:code4yth/chatbot/chatbot.dart';
+import 'package:flutter_chat_ui/flutter_chat_ui.dart';
 // import 'package:flutter/src/material/bottom_navigation_bar_theme.dart';
 
 class bottompage extends StatefulWidget {
@@ -29,28 +30,34 @@ class _bottompageState extends State<bottompage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      
       body: screens[_selectedPage],
       bottomNavigationBar: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 12,horizontal: 10),
+        padding:  EdgeInsets.symmetric(vertical: 12,horizontal: 10),
         child: ClipRRect(
            borderRadius: BorderRadius.circular(30),
           child: BottomNavigationBar(
+            
             currentIndex: _selectedPage,
             type: BottomNavigationBarType.fixed,
             backgroundColor: Colors.blueGrey,
             items: [
               BottomNavigationBarItem(
+                
                   icon: Icon(Icons.forum), label: 'communicatin'),
               BottomNavigationBarItem(icon: Icon(Icons.chat), label: 'chats'),
               BottomNavigationBarItem(icon: Icon(Icons.groups), label: 'group'),
               BottomNavigationBarItem(
                 icon: Icon(Icons.person),
                 label: 'profile',
+                
               ),
             ],
+             selectedItemColor: Colors.white,
             onTap: (index) {
               setState(() {
                 _selectedPage = index;
+                
               });
             },
           ),

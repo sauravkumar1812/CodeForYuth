@@ -62,7 +62,7 @@ class LoginPage extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 40),
               child: TextField(
-                style: TextStyle(fontSize: 18.0, color: Color(0xFFbdc6cf)),
+                style: TextStyle(fontSize: 18.0, color: Colors.black),
                 decoration: InputDecoration(
                   filled: true,
                   fillColor: Color.fromARGB(255, 226, 226, 226),
