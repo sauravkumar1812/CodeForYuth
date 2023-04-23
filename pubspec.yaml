@@ -66,7 +66,7 @@ flutter:
   assets:
     - assets/login/Meditation.jpg
     -  assets/login/google.png
-    -  assets/profile/Nature.png
+    -  assets/profile/
     -  assets/bot/
   #   - images/a_dot_ham.jpeg
 
